@@ -1,0 +1,102 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.calendar {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  position: relative;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.day:hover {
+  background-color: #f2f2f2;
+}
+
+.event-day {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.hours-submenu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hours-submenu.active {
+  display: block;
+}
+
+.hour {
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hour:hover {
+  background-color: #f2f2f2;
+}
+
+.event {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  border-left: 5px solid #4CAF50;
+}
+
+.event-remove {
+  margin-left: 10px;
+  color: #777;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.event-remove:hover {
+  color: #333;
+}
